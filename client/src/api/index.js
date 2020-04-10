@@ -57,24 +57,6 @@ function apiAxios(method, url, params, success, failure) {
             window.alert('error: ' + JSON.stringify(res.data))
           }
       }
-        // if(res.data){
-        //     /return Promise.reject(res);
-        // }
-      // return res;
-      // if (res.data.success === true) {
-      //   if (success) {
-      //     success(res.data)
-      //     // this.$Loading.finish();
-      //     console.log('success: ' + JSON.stringify(res.data))
-      //   }
-      // } else {
-      //   if (failure) {
-      //     failure(res.data)
-      //   } else {
-      //     console.log('error: ' + JSON.stringify(res.data))
-      //     // this.$Loading.error();
-      //   }
-      // }
     })
     .catch(function(err) {
       let res = err.response

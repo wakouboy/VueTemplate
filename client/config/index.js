@@ -9,15 +9,17 @@ module.exports = {
 
     // Paths
     env: require('./dev.env'),
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 26666,
     //port: process.env.PORT || 8080,
     autoOpenBrowser: true,
+    // assetsSubDirectory: 'static',
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    host: '127.0.0.1',
     //配置 webpack 将接口代理到本地
     proxyTable: {
       '/api': {
-        target: 'http://127.0.0.1:22068/', // 接口的域名  
+        target: 'http://127.0.0.1:10888/', // 接口的域名  
         changeOrigin: true,
         pathRewrite:{
             '^/api':''            
@@ -43,13 +45,15 @@ module.exports = {
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    // assetsRoot: path.resolve(__dirname, '../dist'),
+    // assetsSubDirectory: 'static',
+    // // assetsPublicPath: '/',
+    // assetsPublicPath: './',
+    index: path.resolve(__dirname, '../../index.html'),
+    assetsRoot: path.resolve(__dirname, '../../'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
-    /**
-     * Source Maps
-     */
+    assetsPublicPath: './',
+    
 
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
